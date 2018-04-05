@@ -1,41 +1,45 @@
 .page {
-  width: 550px;
-  margin: 0 auto;
-  font-family: 'Helvetica', 'Tahoma', sans-serif;
-  font-size: 16px;
+    width: 550px;
+    margin: 0 auto;
+    font-family: 'Helvetica', 'Tahoma', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
 }
 
 .saggest {
-  position: relative;
+    position: relative;
 }
 
 .saggest__input {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  font: inherit;
-  box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font: inherit;
 }
 
 .saggest__list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
 }
 
 .saggest__input:focus ~ .saggest__list,
 .saggest__input:hover ~ .saggest__list {
-  display: block;
+    display: block;
 }
 
-.saggest__item {
-  padding: 5px 10px;
+.saggest__list li {
+    padding: 5px 10px;
 }
