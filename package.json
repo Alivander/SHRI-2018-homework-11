@@ -1,0 +1,34 @@
+{
+  "name": "Algorithms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Homework for SHRI-2018",
+  "author": "Alina Vanieva",
+  "scripts": {
+    "start": "npm run build && gulp serve",
+    "lint:edit": "editorconfig-cli fix",
+    "lint:css": "stylelint \"css/**/*.css\" --syntax css",
+    "lint:js": "node_modules/.bin/eslint ./ --ignore-path .gitignore",
+    "lint": "npm run lint:edit && npm run lint:scss && npm run lint:js",
+    "deploy": "gh-pages -d source"
+  },
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.9.0",
+    "gh-pages": "^1.1.0",
+    "stylelint": "8.4.x",
+    "stylelint-config-htmlacademy": "0.1.x",
+    "travis": "^0.1.1"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/css/**/*.css"
+  ],
+  "engines": {
+    "node": "8.9"
+  }
+}
