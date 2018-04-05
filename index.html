@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="page">
   
   <h1>Алгоритмы, задание №2: Saggest.</h1>
   <p>
@@ -14,12 +15,16 @@
   </p>
   
   <form method="post" action="#">
-    <label>
-      <span>Введите название улицы:</span>
-      <input type="text">
-    </label>
+    <div>
+      <label for="input">Введите название улицы:</label>
+      <div class="saggest">
+        <input class="saggest__input" id="input" type="text">
+        <ul class="saggest__list"></ul>
+      </div>
+    </div>
   </form>
   
-  <script scr="streets.js"></script>
+  <script scr="js/streets.js"></script>
+  <script scr="/s/saggest.js"></script>
 </body>
 </html>
