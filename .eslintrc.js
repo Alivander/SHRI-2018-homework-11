@@ -1,3 +1,7 @@
 module.exports = {
-    "extends": "airbnb-base"
+    extends: 'loris/es6',
+    root: true,
+    env: {
+        browser: true
+    }
 };
