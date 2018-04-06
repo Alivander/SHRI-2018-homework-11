@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link href="css/style.css" rel="stylesheet">
-  <script type="text/javascript" src="js/streets.js" defer></script>
-  <script type="text/javascript" src="js/saggest.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SAGGEST DEMO</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/streets.js" defer></script>
+    <script type="text/javascript" src="js/saggest.js" defer></script>
 </head>
 <body class="page">
-  
-  <section class="page__content">
-      <h1>Алгоритмы, задание №2: Saggest.</h1>
-      <p>
+
+    <section class="page__content">
+        <h1>Алгоритмы, задание №2: Saggest.</h1>
+        <p>
         Алгоритм реализует поиск в массиве строк набора элементов, в которые входит указанная подстрока без учета регистра.
-      </p>
+        </p>
 
-      <form method="post" action="#">
-        <div>
-          <label for="input">Введите название улицы:</label>
-          <div class="saggest">
-            <input class="saggest__input" id="input" type="text">
-            <ul class="saggest__list saggest__list--plain"></ul>
-            <ul class="saggest__list saggest__list--clusters"></ul>
-          </div>
+        <form method="post" action="#">
+            <div>
+                <label for="input">Введите название улицы:</label>
+                <div class="saggest">
+                    <input class="saggest__input" id="input" type="text">
+                    <ul class="saggest__list saggest__list--plain"></ul>
+                    <ul class="saggest__list saggest__list--clusters"></ul>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section class="log page__log">
+        <div class="log__column">
+            <h2>saggest, ms</h2>
+            <ul class="log__saggest log__saggest--plain"></ul>
         </div>
-      </form>
-  </section>
-
-  <section class="log page__log">
-      <div class="log__column">
-          <h2>saggest, ms</h2>
-          <ul class="log__saggest log__saggest--plain"></ul>
-      </div>
-      <div class="log__column">
-          <h2>saggest(clusters), ms</h2>
-          <ul class="log__saggest log__saggest--clusters"></ul>
-      </div>
-  </section>
+        <div class="log__column">
+            <h2>saggest(clusters), ms</h2>
+            <ul class="log__saggest log__saggest--clusters"></ul>
+        </div>
+    </section>
 
 </body>
 </html>
