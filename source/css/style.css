@@ -1,9 +1,21 @@
 .page {
-    width: 550px;
+    display: flex;
+    min-height: 100vh;
     margin: 0 auto;
     font-family: 'Helvetica', 'Tahoma', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
+}
+
+.page__content {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.page__log {
+    display: flex;
+    max-width: 40%;
+    margin: 0 auto;
 }
 
 * {
@@ -25,14 +37,21 @@
 .saggest__list {
     position: absolute;
     top: 100%;
-    left: 0;
     display: none;
-    width: 100%;
+    width: 50%;
     margin: 0;
     padding: 0;
     list-style: none;
     background-color: #ffffff;
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+.saggest__list--plain {
+    left: 0;
+}
+
+.saggest__list--clusters {
+    right: 0;
 }
 
 .saggest__input:focus ~ .saggest__list,
@@ -42,4 +61,36 @@
 
 .saggest__list li {
     padding: 5px 10px;
+}
+
+.log {
+    margin: 30px auto;
+    background-color: lightgrey;
+}
+
+.log__column {
+    border: 2px solid #ffffff;
+}
+
+.log h2 {
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.log__saggest {
+    min-width: 140px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+
+.log__saggest li {
+    padding: 3px 5px;
+    font-size: 12px;
+    text-align: right;
+    border-bottom: 1px solid grey;
 }
