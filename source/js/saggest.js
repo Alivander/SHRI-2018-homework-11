@@ -6,8 +6,8 @@
     const listPlain = saggestBlock.querySelector('.saggest__list--plain');
     const listClusters = saggestBlock.querySelector('.saggest__list--clusters');
     const log = document.querySelector('.log');
-    const logForPlain = log.querySelector('.log__saggest--plain');
-    const logForClusters = log.querySelector('.log__saggest--clusters');
+    const logForPlain = log.querySelector('.log__list--plain');
+    const logForClusters = log.querySelector('.log__list--clusters');
 
     // Обрабатываем пользовательский ввод
 
