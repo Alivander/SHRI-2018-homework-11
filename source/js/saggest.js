@@ -5,10 +5,20 @@
     const input = saggestBlock.querySelector('.saggest__input');
     const list = saggestBlock.querySelector('.saggest__list');
 
+    const delay = (function () {
+        let timer = 0;
+        return function (callback, ms) {
+            clearTimeout(timer);
+            timer = setTimeout(callback, ms);
+        };
+    })();
+
     input.addEventListener('input', () => {
         list.innerHTML = '';
         if (input.value) {
-            saggest(input.value);
+            delay(() => {
+                saggest(input.value);
+            }, 250);
         }
     });
 
