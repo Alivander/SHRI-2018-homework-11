@@ -1,3 +1,11 @@
+* {
+    box-sizing: inherit;
+}
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
 .page {
     display: flex;
     min-height: 100vh;
@@ -18,9 +26,9 @@
     margin: 0 auto;
 }
 
-* {
-    box-sizing: inherit;
-}
+/*------------------------------------*\
+    #SAGGEST
+\*------------------------------------*/
 
 .saggest {
     position: relative;
@@ -63,6 +71,10 @@
     padding: 5px 10px;
 }
 
+/*------------------------------------*\
+    #LOG
+\*------------------------------------*/
+
 .log {
     margin: 30px auto;
     background-color: lightgrey;
@@ -72,7 +84,9 @@
     border: 2px solid #ffffff;
 }
 
-.log h2 {
+.log h2,
+.log h3 {
+    width: 100%;
     margin: 0;
     padding: 5px;
     font-size: 12px;
@@ -85,12 +99,76 @@
     margin: 0;
     padding: 0;
     font-size: 14px;
+    text-align: right;
     list-style: none;
+}
+
+.log__list--emitter {
+    min-width: 400px;
 }
 
 .log__list li {
     padding: 3px 5px;
     font-size: 12px;
-    text-align: right;
     border-bottom: 1px solid grey;
+}
+
+.log__list--emitter li {
+    text-align: left;
+}
+
+/*------------------------------------*\
+    #GENERATOR
+\*------------------------------------*/
+
+.generator {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+.generator__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.generator__button {
+    display: block;
+    width: 30%;
+    font: inherit;
+    cursor: pointer;
+}
+
+.generator__button--event {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.generator__button--handler {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.generator__button--offhandler {
+    width: 47.5%;
+}
+
+.generator label {
+    display: flex;
+    align-items: center;
+    width: 47.5%;
+}
+
+.generator__input {
+    flex-grow: 1;
+    align-self: stretch;
+    width: 30px;
+    margin-left: 5px;
+    padding: 0 5px;
+    font: inherit;
+    text-align: center;
+    min-width: 30px;
 }
