@@ -40,50 +40,50 @@
 
     // функция saggest находит первые 10 названий, включающих подстроку
 
-      function saggest(substr) {
-          let time = performance.now();  // для определения скорости работы функции
+    function saggest(substr) {
+        let time = performance.now();  // для определения скорости работы функции
 
-          const fragment = document.createDocumentFragment();
-          let counter = 0;
+        const fragment = document.createDocumentFragment();
+        let counter = 0;
 
-          substr = substr.toLowerCase();
+        substr = substr.toLowerCase();
 
-          /* eslint-disable no-undef */
-          for (const street of streets) {
-          /* eslint-anaible no-undef */
-              if (counter >= 10) {
-                  break;
-              }
+        /* eslint-disable no-undef */
+        for (const street of streets) {
+        /* eslint-anaible no-undef */
+            if (counter >= 10) {
+                break;
+            }
 
-              const result = street.toLowerCase().includes(substr);
-              if (result) {
-                  counter++;
-                  const item = document.createElement('li');
-                  item.textContent = street;
-                  fragment.appendChild(item);
-              }
-          }
+            const result = street.toLowerCase().includes(substr);
+            if (result) {
+                counter++;
+                const item = document.createElement('li');
+                item.textContent = street;
+                fragment.appendChild(item);
+            }
+        }
 
-          listPlain.appendChild(fragment);
+        listPlain.appendChild(fragment);
 
-          time = performance.now() - time;  // для определения скорости работы функции
-          logging(time, logForPlain);
-      }
+        time = performance.now() - time;  // для определения скорости работы функции
+        logging(time, logForPlain);
+    }
 
-      // Пытаемся ускорить поиск - разбиваем массив данных на отдельные кластеры
+    // Пытаемся ускорить поиск - разбиваем массив данных на отдельные кластеры
 
-      /* eslint-disable no-undef */
-      /* отключаем no-undef в eslint для переменной массива данных - streets*/
-      const clusters = new Array(5);
-      const clusterValue = Math.floor(streets.length / clusters.length);
+    /* eslint-disable no-undef */
+    /* отключаем no-undef в eslint для переменной массива данных - streets*/
+    const clusters = new Array(5);
+    const clusterValue = Math.floor(streets.length / clusters.length);
 
-      for (let i = 0; i < clusters.length - 1; i++) {
-          const j = clusterValue * i;
-          clusters[i] = streets.slice(j, j + clusterValue);
-      }
+    for (let i = 0; i < clusters.length - 1; i++) {
+        const j = clusterValue * i;
+        clusters[i] = streets.slice(j, j + clusterValue);
+    }
 
-      clusters[clusters.length - 1] = streets.slice(clusterValue * (clusters.length - 1));
-      /* eslint-anaible no-undef */
+    clusters[clusters.length - 1] = streets.slice(clusterValue * (clusters.length - 1));
+    /* eslint-anaible no-undef */
 
     // функция saggestClusters находит первые 10 названий, включающих подстроку,
     // перебирая отдельные кластеры из массива данных
