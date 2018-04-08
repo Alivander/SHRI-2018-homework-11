@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EMITTER DEMO</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/emitter.js" defer></script>
+</head>
+<body class="page">
+
+    <section class="page__content">
+        <h1>Алгоритмы, задание №1: Event Emitter.</h1>
+        <p>Генератор событий, имеющий следующие методы:</p>
+        <ul>
+            <li>
+              <b>on</b> - подписка на событие
+            </li>
+            <li>
+              <b>off</b> - отписка от события
+            </li>
+            <li>
+              <b>emit</b> - вызов события
+            </li>
+        </ul>
+
+        <div class="generator">
+            <p>
+                <b>Добавьте обработчики для клика</b>
+            </p>
+            <div class="generator__buttons generator__buttons--on">
+                <button class="generator__button generator__button--handler" data-amount="10">+10 handler</button>
+                <button class="generator__button generator__button--handler" data-amount="100">+100 handler</button>
+                <button class="generator__button generator__button--handler" data-amount="1000">+1 000 handler</button>
+                <button class="generator__button generator__button--handler" data-amount="10000">+10 000 handler</button>
+                <button class="generator__button generator__button--handler" data-amount="100000">+100 000 handler</button>
+                <button class="generator__button generator__button--handler" data-amount="1000000">+1000 000 handler</button>
+            </div>
+            <p>
+                <b>Удалите N обработчиков для клика</b>
+            </p>
+            <div class="generator__buttons">
+                <label>
+                    N: <input class="generator__input" type="number" value="100">
+                </label>
+                <button class="generator__button generator__button--offhandler" data-amount="10000">remove handler</button>
+            </div>
+            <p>
+                <b>Кликните, чтобы создать событие</b>
+            </p>
+            <div class="generator__buttons generator__buttons--events">
+                <button class="generator__button generator__button--event">Клик!</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="log page__log">
+        <div class="log__column">
+            <h2>emitter log</h2>
+            <ul class="log__list log__list--emitter"></ul>
+        </div>
+    </section>
+
+</body>
+</html>
